@@ -1,0 +1,3 @@
+[submodule "omarchy/.config/omarchy/themes/ghost-pastel"]
+	path = omarchy/.config/omarchy/themes/ghost-pastel
+	url = https://github.com/row-huh/omarchy-ghost-pastel-theme

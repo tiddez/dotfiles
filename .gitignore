@@ -2,6 +2,9 @@
 omarchy/.config/omarchy/current
 omarchy/.config/omarchy/themed/
 
+# Backup files
+**/*.bak.*
+
 # Sensitive or machine-specific
 bash/.bashrc.local
 zsh/.zshrc.local
