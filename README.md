@@ -29,19 +29,15 @@ The `ghost-pastel` Omarchy theme is tracked as a git submodule pointing to its [
 ## Fresh install
 
 ```bash
-# 1. Clone (including submodules)
-git clone --recurse-submodules https://github.com/tiddez/dotfiles.git ~/.dotfiles
-
-# 2. Install GNU Stow if not present
-sudo pacman -S stow
-
-# 3. Stow all packages
+git clone https://github.com/tiddez/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-stow bash zsh git nvim tmux hypr omarchy alacritty ghostty kitty waybar walker mako lazygit btop fastfetch starship
+./backup.sh   # backs up existing configs to /tmp/.config_bkps_<timestamp>, then removes them
+./install.sh  # installs stow if needed, then symlinks everything
 ```
 
-> If a target file already exists and is not a symlink, stow will error.
-> Back it up first: `cp ~/.bashrc ~/.bashrc.bak` then delete the original before stowing.
+`backup.sh` checks every file and directory that stow would conflict with. If it finds a real file, it copies it to a timestamped folder in `/tmp` and removes the original. Existing symlinks (already stowed) are skipped. After it runs, stow has a clean path.
+
+`install.sh` clones the repo if it isn't already present, initialises submodules, and runs `stow` for all packages.
 
 ## Daily use
 
