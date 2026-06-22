@@ -1,0 +1,7 @@
+# Omarchy - skip binary/generated theme assets
+omarchy/.config/omarchy/current
+omarchy/.config/omarchy/themed/
+
+# Sensitive or machine-specific
+bash/.bashrc.local
+zsh/.zshrc.local
