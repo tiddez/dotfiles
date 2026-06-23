@@ -11,6 +11,7 @@
     "bluetooth",
     "network",
     "pulseaudio",
+    "custom/perf",
     "cpu",
     "battery"
   ],
@@ -52,6 +53,13 @@
     "tooltip-format": "Omarchy update available",
     "signal": 7,
     "interval": 21600
+  },
+
+  "custom/perf": {
+    "exec": "$HOME/.config/waybar/scripts/perf.sh",
+    "on-click": "$HOME/.config/waybar/scripts/perf-toggle.sh",
+    "interval": 5,
+    "tooltip": false
   },
 
   "cpu": {
