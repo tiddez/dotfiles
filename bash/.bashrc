@@ -11,3 +11,4 @@ source ~/.local/share/omarchy/default/bash/rc
 # alias p='python'
 
 . "$HOME/.local/share/../bin/env"
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"

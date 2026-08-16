@@ -29,3 +29,5 @@
 [user]
 	name = Leonardo Barbosa
 	email = leonardolenz.barbosa@gmail.com
+[credential]
+	helper = store
