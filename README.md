@@ -23,6 +23,7 @@ Personal dotfiles for an [Omarchy](https://omarchy.org/) system, managed with [G
 | `btop` | `.config/btop/` |
 | `fastfetch` | `.config/fastfetch/` |
 | `starship` | `.config/starship.toml` |
+| `scripts` | `.local/bin/` (personal utility scripts, e.g. `backup-to-nas.sh`) |
 
 The `ghost-pastel` Omarchy theme is tracked as a git submodule pointing to its [original repo](https://github.com/row-huh/omarchy-ghost-pastel-theme).
 
@@ -38,6 +39,8 @@ cd ~/.dotfiles
 `backup.sh` checks every file and directory that stow would conflict with. If it finds a real file, it copies it to a timestamped folder in `/tmp` and removes the original. Existing symlinks (already stowed) are skipped. After it runs, stow has a clean path.
 
 `install.sh` clones the repo if it isn't already present, initialises submodules, and runs `stow` for all packages.
+
+**Not tracked (recreate manually after a fresh install):** `~/.smbcredentials` (mode 600, used by `backup-to-nas.sh` to mount the NAS — contains a plaintext SMB password, intentionally kept out of git).
 
 ## Daily use
 

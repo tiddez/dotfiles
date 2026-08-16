@@ -5,7 +5,7 @@ set -euo pipefail
 
 DOTFILES_DIR="$HOME/.dotfiles"
 REPO="https://github.com/tiddez/dotfiles.git"
-PACKAGES=(bash zsh git nvim tmux hypr omarchy alacritty ghostty kitty waybar walker mako lazygit btop fastfetch starship)
+PACKAGES=(bash zsh git nvim tmux hypr omarchy alacritty ghostty kitty waybar walker mako lazygit btop fastfetch starship scripts)
 
 # Install stow if missing
 if ! command -v stow &>/dev/null; then
