@@ -1,0 +1,5 @@
+#!/bin/bash
+# CPU power limits (Intel RAPL) — Dell Latitude 7400. Firmware default: 22 W / 51 W.
+R=/sys/class/powercap/intel-rapl:0
+echo 15000000 > $R/constraint_0_power_limit_uw   # PL1: sustained 15 W
+echo 30000000 > $R/constraint_1_power_limit_uw   # PL2: bursts 30 W

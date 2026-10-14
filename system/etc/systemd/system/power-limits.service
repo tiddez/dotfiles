@@ -1,0 +1,10 @@
+[Unit]
+Description=CPU power limits 15 W / 30 W (Intel RAPL)
+After=multi-user.target suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/set-power-limits
+
+[Install]
+WantedBy=multi-user.target suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target

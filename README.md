@@ -24,6 +24,7 @@ Personal dotfiles for an [Omarchy](https://omarchy.org/) system, managed with [G
 | `fastfetch` | `.config/fastfetch/` |
 | `starship` | `.config/starship.toml` |
 | `scripts` | `.local/bin/` (personal utility scripts, e.g. `backup-to-nas.sh`) |
+| `system` | **Not stowed** — system files outside `$HOME` for the Dell Latitude 7400: undervolt (`/etc/intel-undervolt.conf`), CPU power limits 15/30 W (`power-limits.service`), battery charge limit 75–80%. Installed with `sudo system/install-system.sh`. See [`system/README.md`](system/README.md). |
 
 The `ghost-pastel` Omarchy theme is tracked as a git submodule pointing to its [original repo](https://github.com/row-huh/omarchy-ghost-pastel-theme).
 
@@ -34,6 +35,7 @@ git clone https://github.com/tiddez/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./backup.sh   # backs up existing configs to /tmp/.config_bkps_<timestamp>, then removes them
 ./install.sh  # installs stow if needed, then symlinks everything
+sudo ./system/install-system.sh   # Dell Latitude 7400 only: undervolt, power limits, battery limit
 ```
 
 `backup.sh` checks every file and directory that stow would conflict with. If it finds a real file, it copies it to a timestamped folder in `/tmp` and removes the original. Existing symlinks (already stowed) are skipped. After it runs, stow has a clean path.
