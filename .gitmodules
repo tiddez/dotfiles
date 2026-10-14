@@ -1,3 +1,6 @@
 [submodule "omarchy/.config/omarchy/themes/ghost-pastel"]
 	path = omarchy/.config/omarchy/themes/ghost-pastel
 	url = https://github.com/row-huh/omarchy-ghost-pastel-theme
+[submodule "omarchy/.config/omarchy/plugins/netmojo.omdrop"]
+	path = omarchy/.config/omarchy/plugins/netmojo.omdrop
+	url = https://github.com/brentkearney/omdrop-plugin.git

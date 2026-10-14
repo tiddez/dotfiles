@@ -7,10 +7,12 @@
           "id": "omarchy.indicators"
         },
         {
+          "id": "omarchy.clock",
           "format": "dddd HH:mm",
           "formatAlt": "d MMMM 'W'ww yyyy",
-          "id": "omarchy.clock",
-          "verticalFormat": "HH\n—\nmm"
+          "verticalFormat": "HH\n—\nmm",
+          "birthYear": 1998,
+          "lifeExpectancy": 90
         },
         {
           "id": "omarchy.keyboard-layout"
@@ -33,6 +35,9 @@
       "right": [
         {
           "id": "omarchy.tray"
+        },
+        {
+          "id": "netmojo.omdrop"
         },
         {
           "id": "omarchy.agents"
